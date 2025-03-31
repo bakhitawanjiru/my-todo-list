@@ -1,0 +1,146 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+.todo-container {
+  background-size: 200% 200%;
+  animation: gradient-shift 15s ease infinite;
+  min-height: 100vh;
+}
+
+
+.title-glow {
+  text-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+}
+
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
+}
+
+
+.floating-emoji {
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+
+.input-focus {
+  transition: all 0.2s ease;
+}
+
+.input-focus:focus {
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.3);
+  outline: none;
+}
+.button-hover {
+  transition: all 0.2s ease;
+}
+
+.button-hover:hover {
+  transform: translateY(-2px);
+  filter: brightness(110%);
+}
+
+
+.list-item {
+  transition: all 0.2s ease;
+}
+
+.list-item:hover {
+  background-color: rgba(14, 165, 233, 0.05);
+}
+
+.completed-task {
+  transition: all 0.3s ease;
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.delete-button {
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.list-item:hover .delete-button {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .todo-container,
+  .floating-emoji,
+  .card-hover,
+  .button-hover {
+    animation: none;
+    transition: none;
+  }
+}
