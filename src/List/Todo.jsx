@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useTodo } from './TodoContext'
 
-function todo() {
+function Todo() {
   const [text, setText] = useState('')
   const { dispatch } = useTodo()
 
@@ -21,11 +21,11 @@ function todo() {
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder="Add a new task..."
-          className="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
+          className="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500 input-focus"
         />
         <button
           type="submit"
-          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none"
+          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none button-hover"
         >
           Add
         </button>
@@ -34,4 +34,4 @@ function todo() {
   )
 }
 
-export default todo
+export default Todo
