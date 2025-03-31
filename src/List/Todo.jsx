@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useTodo } from './TodoContext'
 
-function Todo() {
+function todo() {
   const [text, setText] = useState('')
   const { dispatch } = useTodo()
 
@@ -34,4 +34,4 @@ function Todo() {
   )
 }
 
-export default Todo
+export default todo
