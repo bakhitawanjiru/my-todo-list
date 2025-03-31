@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useTodo } from '../List/TodoContext'
+import { useTodo } from './TodoContext'
 
 function Todo() {
   const [text, setText] = useState('')
